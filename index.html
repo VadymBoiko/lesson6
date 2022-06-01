@@ -20,24 +20,24 @@
             <div class="error uncorrect-email">Please provide a correct email</div>
             <input type="password" name="password" id="pass" pattern="[a-zA-Z]{8,15}" placeholder="Password" required>
             <div class="error uncorrect-pass">Please provide a correct password</div>
-            <div class="check-box">
-                <input type="checkbox" name="agree" id="check">
-                <span>I agree with Privacy Policy</span>
-            </div>
             <input type="button" value="Sign Up" name="submit" disabled>
         </form>
     </div>
-    <div class="modal-block">
-        <div class="top-block">
-            <i class="fa-regular fa-circle-check"></i>
-        </div>
-        <div class="bottom-block">
-            <h2>Great!</h2>
-            <p>Your account has been created successfully</p>
-            <button id="start" >Start Exploring <i class="fa-thin fa-arrow-right-long"></i></button>
+    <div class="container_profile">
+        <div class="header__account"></div>
+        <div class="avatar man-photo-account"></div>
+        <h2 class="name_account">Ivan Ivanov</h2>
+        <h3 class="email_account">iv@gmail.com</h3>
+        <h3 class="position">None</h3>
+        <form name="signOut">
+            <input class="signOut" type="reset" value="signOut">
+        </form>
+        <div class="footer">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-instagram"></i>
         </div>
     </div>
-    <div id="overlay"></div>
     <script src="script.js"></script>
 </body>
 </html>
