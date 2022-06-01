@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container d-flex">
+        <p class="header">Please sign up</p>
+        <form name="signUp" class="d-flex" id="signForm">
+            <input type="text" name="firstName" pattern="[a-zA-Z]{2,20}" placeholder="First name" required>
+            <div class="error uncorrect-fname">Please provide a correct First name</div>
+            <input type="text" name="secondName" pattern="[a-zA-Z]{2,20}" placeholder="Second name" required>
+            <div class="error uncorrect-sname">Please provide a correct Second name</div>
+            <input type="text" name="email" pattern="[a-zA-Z][0-9a-zA-Z_.-]{2,21}@[a-zA-Z]{2,12}\.[a-zA-Z]{2,12}" placeholder="Email" required>
+            <div class="error uncorrect-email">Please provide a correct email</div>
+            <input type="password" name="password" id="pass" pattern="[a-zA-Z]{8,15}" placeholder="Password" required>
+            <div class="error uncorrect-pass">Please provide a correct password</div>
+            <div class="check-box">
+                <input type="checkbox" name="agree" id="check">
+                <span>I agree with Privacy Policy</span>
+            </div>
+            <input type="button" value="Sign Up" name="submit" disabled>
+        </form>
+    </div>
+    <div class="modal-block">
+        <div class="top-block">
+            <i class="fa-regular fa-circle-check"></i>
+        </div>
+        <div class="bottom-block">
+            <h2>Great!</h2>
+            <p>Your account has been created successfully</p>
+            <button id="start" >Start Exploring <i class="fa-thin fa-arrow-right-long"></i></button>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <script src="script.js"></script>
+</body>
+</html>
