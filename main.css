@@ -20,7 +20,7 @@ body{
     font-size: 45px;
     text-align: center;
 }
-#signForm{
+#signForm, #signInForm{
     position: relative;
 }
 .error{
@@ -44,7 +44,7 @@ body{
     left: 0;
     display: none;
 }
-.uncorrect-email{
+.uncorrect-email, .exist-email{
     position: absolute;
     top: 205px;
     left:0px;
@@ -56,26 +56,28 @@ body{
     left: 0px;
     display: none;
 }
-#signForm > input{
+#signForm > input, #signInForm > input{
     width: 350px ;
     height: 45px;
     margin: 15px 0;
-    padding-left: 10px;
+    padding: 10px;
     border-radius: 4px;
+    font-size: 15px;
     border: none;
     outline: none;
+    resize: none;
 }
-#signForm > input:focus {
+#signForm > input:focus, #signInForm > input:focus{
     border:1px solid rgb(28, 190, 240);
     box-shadow: 0px 0px 2px 1px rgb(28, 190, 240);
 }
-
-#check{
-    width: 15px;
-    height: 20px;
-    vertical-align: middle;
+#signInForm > input[type="button"]{
+    background-color: rgb(224, 241, 224);
+    cursor: pointer;
 }
-
+#signInForm > input[type="button"]:hover{
+    background-color: rgb(72, 185, 72);
+}
 .true {
     border: 2px solid green;
 }
@@ -83,51 +85,6 @@ body{
 .false {
     border: 2px solid red;
 }
-
-.modal-block{
-    display: none;
-    position: absolute;
-    top: 25%;
-    left: 35%;
-    width: 400px;
-    height: 300px;
-    border-radius: 4px;
-    z-index: 99;
-}
-.top-block{
-    width: 100%;
-    height: 40%;
-    background-color: rgb(76, 167, 106);
-    color: white;
-    font-size: 90px;
-    text-align: center;
-    padding: 10px 0;
-}
-.bottom-block{
-    width: 100%;
-    height: 60%;
-    background-color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-.bottom-block > h2{
-    font-size: 35px;
-}
-.bottom-block>p{
-    font-size: 18px;
-    margin: 15px 0;
-}
-.bottom-block>button{
-    width: 120px;
-    height: 30px;
-    background-color: rgb(224, 169, 51);
-    color: white;
-    border-radius: 14px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
 .container_profile{
     display: none;
     width: 300px;
@@ -139,7 +96,7 @@ body{
 }
 .header__account{
     width: 100%;
-    height: 60px;
+    height: 120px;
     margin-bottom: 75px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -165,22 +122,17 @@ body{
     background-position: center center;
     background-size: 180%;
 }
-.name_account{
+.name_account, .email_account, .position{
     text-align: center;
-}
-.email_account{
-    text-align: center;
-}
-.position{
-    text-align: center;
+    margin: 5px;
 }
 .signOut{
-    width: 70px;
+    width: 213px;
     height: 30px;
     display: block;
-    background-color: beige;
+    background-color: #0e0fc9;
     border: 1px solid grey;
-    color: rgb(29, 31, 27);
+    color: white;
     margin: 0 auto 10px;
     cursor: pointer;
     border-radius: 5px;
@@ -201,4 +153,16 @@ body{
     font-size: 25px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+.signIn-block{
+    display: none;
+}
+.no-profile{
+    position: absolute;
+    top: 136px;
+    left: 0px;
+    display: none;
+}
+.signUpLink{
+    margin: 18px 0 0 0px;
 }

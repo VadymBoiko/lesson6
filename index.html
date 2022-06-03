@@ -10,27 +10,40 @@
 </head>
 <body>
     <div class="container d-flex">
-        <p class="header">Please sign up</p>
-        <form name="signUp" class="d-flex" id="signForm">
-            <input type="text" name="firstName" pattern="[a-zA-Z]{2,20}" placeholder="First name" required>
-            <div class="error uncorrect-fname">Please provide a correct First name</div>
-            <input type="text" name="secondName" pattern="[a-zA-Z]{2,20}" placeholder="Second name" required>
-            <div class="error uncorrect-sname">Please provide a correct Second name</div>
-            <input type="text" name="email" pattern="[a-zA-Z][0-9a-zA-Z_.-]{2,21}@[a-zA-Z]{2,12}\.[a-zA-Z]{2,12}" placeholder="Email" required>
-            <div class="error uncorrect-email">Please provide a correct email</div>
-            <input type="password" name="password" id="pass" pattern="[a-zA-Z]{8,15}" placeholder="Password" required>
-            <div class="error uncorrect-pass">Please provide a correct password</div>
-            <input type="button" value="Sign Up" name="submit" disabled>
-        </form>
+        <div class="signUp-block">
+            <p class="header">Please Sign up</p>
+            <form name="signUp" class="d-flex" id="signForm">
+                <input type="text" name="firstName" pattern="[a-zA-Z]{2,20}" placeholder="First name" required>
+                <div class="error uncorrect-fname">Please provide a correct First name</div>
+                <input type="text" name="secondName" pattern="[a-zA-Z]{2,20}" placeholder="Second name" required>
+                <div class="error uncorrect-sname">Please provide a correct Second name</div>
+                <input type="text" name="email" pattern="[a-zA-Z][0-9a-zA-Z_.-]{2,21}@[a-zA-Z]{2,12}\.[a-zA-Z]{2,12}" placeholder="Email" required>
+                <div class="error uncorrect-email">Please provide a correct email</div>
+                <div class="error exist-email">This email is already exist</div>
+                <input type="password" name="password" id="pass" pattern="[a-zA-Z0-9._-]{4,16}" placeholder="Password" required>
+                <a class="signInLink" href="#">Sign in now</a>
+                <div class="error uncorrect-pass">Please provide a correct password</div>
+                <input type="button" value="Sign Up" name="submit" disabled>
+            </form>
+        </div>
+        <div class="signIn-block">
+            <p class="header">Please Sign In</p>
+            <form name="signIn" class="d-flex" id="signInForm">
+                <input type="text" name="signInEmail" placeholder="Enter email">
+                <input type="text" name="signInPassword" placeholder="Enter password">
+                <div class="error no-profile">Incorrect email or password</div>
+                <a class="signUpLink" href="#">Sign up now</a>
+                <input type="button" value="Sign In" name="enterProfile">
+            </form>
+        </div>
     </div>
     <div class="container_profile">
         <div class="header__account"></div>
         <div class="avatar man-photo-account"></div>
         <h2 class="name_account">Ivan Ivanov</h2>
         <h3 class="email_account">iv@gmail.com</h3>
-        <h3 class="position">None</h3>
         <form name="signOut">
-            <input class="signOut" type="reset" value="signOut">
+            <input class="signOut" type="reset" value="sign Up" name="out">
         </form>
         <div class="footer">
             <i class="fa-brands fa-facebook-f"></i>
